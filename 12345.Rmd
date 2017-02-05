@@ -1,0 +1,31 @@
+---
+title: ""
+author: "Leslie Barragán Ramírez"
+date: "3 de febrero de 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## CALIFICACIONES
+
+### Primavera 2016
+
+ * Programación Actuarial                  `8`
+ * Matemáticas Básicas                     `9`
+ * Problemas de Matemáticas Básicas        `9`
+ * Conceptos de Cálculo                    `9`
+ * DHPC                                   `10`
+ * Introducción a la Profesión Actuarial   `6`
+
+### Otoño 2016
+
+ * Programación Actuarial II                  `7`
+ * Teoría de Ecuaciones                `6`
+ * Geometría Analítica        `9`
+ * Cálculo Diferencial                  `10`
+ * DHTICS                                   `10`
+ * Microeconomía   `9`
+
