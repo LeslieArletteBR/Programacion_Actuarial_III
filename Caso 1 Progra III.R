@@ -33,6 +33,7 @@ completos <- function(directorio, id = 1:332) {
 }
 
 #Parte 3
+correlac <- function(directorio, horizonte = 0) {
         source("completos.R")
         correlacion<-(numeric)
         
@@ -51,4 +52,3 @@ completos <- function(directorio, id = 1:332) {
         }
         return(funcion)
 }
-
