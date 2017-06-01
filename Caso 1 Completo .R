@@ -1,16 +1,17 @@
 
 #Parte1
 directorio<- setwd("C:/Users/lesla/Desktop/specdata")
-mediacontaminante <- function(directorio,contaminante, id=1:332){
+mediacontaminante2 <- function(directorio,contaminante, id=1:332){
         x <- id
-        y<- (as.character(substitute(contaminante)))
+        y <- (as.character(substitute(contaminante)))
         nobs<- numeric()
-        datos<-numeric()
+        datos<- numeric()
         for (j in x){
+        
                 data <- read.csv(sprintf("%03d.csv", j))
                 nobs <- c(nobs,sum(complete.cases(data)))
                 datos<- c(datos,sum(data[[y]], na.rm=TRUE))
-        }
+}
         dataframe<- data.frame(id, nobs)
         dataframe2<- data.frame(id,datos)
         suma<- c(sum(dataframe$nobs))
@@ -33,10 +34,11 @@ completos <- function(directorio, id = 1:332) {
 }
 
 #Parte 3
+
 corr <- function(directorio, horizonte = 0) {
         source("completos.R")
         correlacion<-(numeric)
-        
+        directorio<- setwd("C:/Users/lesla/Desktop/specdata")
         
         framecompletos <- completos(directorio, 1:332)
         
@@ -48,7 +50,6 @@ corr <- function(directorio, horizonte = 0) {
                 data <- read.csv(sprintf("%03d.csv",s))
                 completos<- data[complete.cases(data), ] 
                 correlacion <- c(correlacion, cor(completos$sulfate, completos$nitrate)) 
-                
         }
         return(funcion)
 }
